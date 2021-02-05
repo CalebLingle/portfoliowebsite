@@ -1,57 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Caleb Lingles Portfolio Website</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" href="default.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b521a3f4f2.js" crossorigin="anonymous"></script>
     </head>
-    <body class="preload">
+    <body>
+        <div class="container-fluid" >               
+            <!-- Div to create sidebar and main content area work -->
+            <div class="row position-relative main-container">
+
+                <!-- Navigation Sidebar -->
+                <div class="col-3 nav-wrapper position-fixed">
+                    <ul class="nav flex-column align-content-center ">
+                        <li class="nav-item">
+                            <a href="#Welcome" class="nav-link scroll">Welcome</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#About" class="nav-link scroll">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Projects" class="nav-link scroll">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Contact" class="nav-link scroll">Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
         
-        <div class="main-container">
-            <!-- Navigation Sidebar -->
-            <div class="nav-wrapper">
-                <section class="Navigation">
-                    <div id="sidebar">
-                        <nav>
-                            <ul>
-                                <a href="#"><li class="nav"></li></a>
-                                <a href="#"><li class="nav">About Me</li></a>
-                                <a href="#"><li class="nav">Projects</li></a>
-                                <a href="#"><li class="nav">Contact Me</li></a>
-                            </ul>
-                        </nav>
-                    </div>
-                </section>
-            </div>
-    
-            <!-- Content Wrapper -->
-            <div class="content-wrapper">
-    
-                <!-- Greeting -->
-                <section class="Welcome">
-                        <h1>Hi, my name is Caleb Lingle</h>
-                </section>
-    
-                <!-- About Me Section -->
-                <section class="About">
-                    I'm an Electrical Engineer and Web Developer.
-                </section>
-    
-                <!-- Project Display Section -->
-                <section class="Projects">
-                    Here's my projects
-                </section>
-    
-                <!-- Contact Section -->
-                <section class="Contact">
-                    Contact Me:
-                </section>
+                
+                <!-- Content Wrapper -->
+                <div class="content-wrapper col-9 position-absolute" style="left: 25vw;">
+        
+                    <!-- Greeting -->
+                        <div id="Welcome" class="content">
+                            <div class="greeting">
+                                <h1 class="animate-typewriter">
+                                    Hi, I'm Caleb Lingle.
+                                </h1>
+                            </div>
+                        </div>
+                    
+        
+                    <!-- About Me Section -->
+                        <div id="About" class="content">
+                            <div id="desc-header" class="desc">
+                                <h2>I'm
+                                    <span class="txt-rotate" data-period="2000" 
+                                        data-rotate='["an Electrical Engineer.", "a Web Developer.", "a Problem Solver."]'></span> </h2>
+                            </div>
+
+                            <div class="row desc">
+                                <img src="Images/photo-1555664424-778a1e5e1b48.webp" alt="Electrical Components" class="rounded-circle img-fluid col-6">
+                                <h3 class="col-6">I used to work as a Electrical Engineer on radio frequency and digital circuit projects.</h3>
+                            </div>
+                            <div class="row desc">
+                                <h3 class="col-6">After a 3 month long mission trip to Uganda I came back and decided to teach myself Web Development.</h3>
+                                <img src="Images/photo-1555066932-e78dd8fb77bb.webp" alt="Computer with code on it" class="rounded-circle img-fluid col-6">
+                            </div>
+                            <div class="row desc">
+                                <img src="Images/photo-1514168757508-07ffe9ae125b.webp" alt="workstation" class="rounded-circle img-fluid col-6">
+                                <h3 class="col-6">I love working on projects and puzzles. Anything to make me think, get my brain going, and keep my mind busy.</h3>
+                            </div>
+                            <div class="row desc">
+                                <h3 class="col-6">I love to rock climb and explore the amazing world we live in.</h3>
+                                <img src="Images/photo-1516592673884-4a382d1124c2.webp" alt="Rock wall with protection and a rope" class="rounded-circle img-fluid col-6">
+                            </div>
+                            <div class="end row">
+                                <h3 id="end" class="col-10">Check out my resume for some of my previous professional experience!</h3>
+                                <a href="Resume/Resume(2021).pdf" download="Caleb_Lingle_Resume"><i class="fas fa-file-download col-2"></i></a>
+                            </div>
+                        </div>
+        
+                        <hr />
+
+                    <!-- Project Display Section -->
+                        <div id="Projects" class="content">
+                            <h2>Feel free to check out some of my work!</h2>
+                            <div class="cards">
+                                <div id="card" class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-4">
+                                            <img src="Images/Projects/randomquotemachine.PNG" class="card-img" alt="">
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="card-body body">
+                                                <h5 class="card-title">Random Quote Generator</h5>
+                                                <p class="card-text">This web app generates random quotes and gives you the ability to tweet them straight from the app.</p>
+                                                <div class="proj-links">
+                                                    <a href="https://github.com/CalebLingle/fcc-RandomQuoteMachine" target="_blank" rel="noopener noreferrer"><div class="btn btn-outline-light">Code</div></a>
+                                                    <a href="https://caleb-lingle-randomquotemachine.netlify.app/" target="_blank" rel="noopener noreferrer"><div class="btn btn-outline-light">Demo</div></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="card" class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-8">
+                                            <div class="card-body body">
+                                                <h5 class="card-title">Markdown Previewer</h5>
+                                                <p class="card-text">This web app allows you to create HTML markup and see a preview of it live on screen.</p>
+                                                <div class="proj-links">
+                                                    <a href="https://github.com/CalebLingle/fcc-MarkdownPreviewer" target="_blank" rel="noopener noreferrer"><div class="btn btn-outline-light">Code</div></a>
+                                                    <a href="https://caleb-lingle-markdownpreviewer.netlify.app/" target="_blank" rel="noopener noreferrer"><div class="btn btn-outline-light">Demo</div></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="Images/Projects/markdownpreviewer.PNG" class="card-img" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="card" class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-4">
+                                            <img src="Images/Projects/drummachine.PNG" class="card-img" alt="">
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="card-body body">
+                                                <h5 class="card-title">Drum Machine</h5>
+                                                <p class="card-text">This web app is a drum, play the different sounds by either pressing the buttons on screen or using your keyboard.</p>
+                                                <div class="proj-links">
+                                                    <a href="https://github.com/CalebLingle/fcc-DrumMachine" target="_blank" rel="noopener noreferrer"><div class="btn btn-outline-light">Code</div></a>
+                                                    <a href="https://caleb-lingle-drummachine.netlify.app/" target="_blank" rel="noopener noreferrer"><div class="btn btn-outline-light">Demo</div></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="card" class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-8">
+                                            <div class="card-body body">
+                                                <h5 class="card-title justify-content-center">Landing Page</h5>
+                                                <p class="card-text">This is a landing page example created with pure HTML and CSS.</p>
+                                                <div class="proj-links">
+                                                    <a href="https://codepen.io/CalebLingle/full/jOqaywg" target="_blank" rel="noopener noreferrer"><div class="btn btn-outline-light">CodePen</div></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="Images/Projects/landingpage.png" class="card-img" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        
+
+        
+                    <!-- Contact Section -->
+                        <div id="Contact" class="content">
+                            <div class="contact-final row"><h2>Contact Me:</h2></div>
+                            <div class="form">
+                                <form id="Contact-Form" method="POST" name="Contact-Form" data-netlify="true"></form>
+                                        <div class="form-group">
+                                            <label for="name">Name:</label>
+                                            <input type="text" name="user_name" id="name" class="form-control" placeholder="Your Name Here">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">E-mail:</label>
+                                            <input type="email" id="mail" name="user_email" aria-describedby="emailHelp" class="form-control" placeholder="email@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message">Message:</label>
+                                            <textarea name="user_message" id="message" placeholder="Let's talk!" class="form-control"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-outline-light">Send!</button>
+                                </form>
+                            </div>
+                            <div class="icons">
+                                <div class="col-3"><a href="https://github.com/CalebLingle"><i class="fab fa-github"></i></a></div>
+                                <div class="col-3"><a href="mailto:caleb.lingle1@gmail.com"><i class="fas fa-envelope"></i></a></div>
+                                <div class="col-3"><a href="https://www.linkedin.com/in/caleb-lingle/"><i class="fab fa-linkedin"></i></a></div>
+                                <div class="col-3"><a href="https://codepen.io/CalebLingle"><i class="fab fa-codepen"></i></a></div>
+                            </div>
+                        </div>
+                </div>
             </div>
         </div>
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        
+        <script src="JS/aboutMeTypewriter.js"></script>
+        <script src="JS/SmoothSrolling.js"></script>
+
+        <script>
+            document.querySelector("form").addEventListener("submit", handleSubmit);
+
+            const handleSubmit = (e) => {
+                e.preventDefault()
+                let contactForm  = document.getElementById('Contact-Form');
+                let formData = new FormData(contactForm)
+                fetch('/', {
+                    method: 'POST',
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+
+                })
+            }
+        </script>
     </body>
 </html>
